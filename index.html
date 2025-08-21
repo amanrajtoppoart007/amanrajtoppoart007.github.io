@@ -1,188 +1,230 @@
-<!DOCTYPE html>
-<!--[if lt IE 7]> <html class="ie lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>    <html class="ie lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>    <html class="ie lt-ie9"> <![endif]-->
-<!--[if gt IE 8]> <html> <![endif]-->
-<!--[if !IE]><!--><html lang="en"><!-- <![endif]-->
+<!doctype html>
+<html lang="en">
 <head>
-	<title>Happy Birthday</title>
-	<meta charset="UTF-8" />
-	<meta name="description" content="Happy Birthday Xola">
-	<meta name="robots" content="index, follow" />
-	<link rel="author" href="https://amanrajtoppoart007.github.io" /> 
-    <meta name="keywords" content="Birthday, Happy">
-    <!-- Strat of Facebook Meta -->
-    <meta property="og:type" content="E-Greeting" />
-    <meta property="og:image" content="favicon.ico" />
-    <meta property="og:description" content="Wish you a very Happy Birthday">
-    <!-- End of Facebook Meta Tags -->
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
-	<meta name="apple-mobile-web-app-capable" content="yes">
-	<meta name="apple-mobile-web-app-status-bar-style" content="black">
-	<meta http-equiv="X-UA-Compatible" content="IE=9; IE=8; IE=7; IE=EDGE" />
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
-	<link rel="stylesheet" type="text/css" href="stylesheet.css">
-	<link rel="stylesheet" type="text/css" href="loading.css">
-	<link href='https://fonts.googleapis.com/css?family=Signika' rel='stylesheet' type='text/css'>
-	<!-- <link href='http://fonts.googleapis.com/css?family=Nunito' rel='stylesheet' type='text/css'> -->
-	<link rel="stylesheet/less" href="cake.less">
-	<script src="//cdnjs.cloudflare.com/ajax/libs/less.js/2.1.0/less.min.js"></script>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Aman Raj — Portfolio</title>
+    <meta name="description" content="Aman Raj — React Native, React.js, Laravel & Node.js developer. Work, projects, skills, and contact." />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- TailwindCSS (CDN) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        :root { color-scheme: light dark; }
+        html { scroll-behavior: smooth; }
+        body { font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, 'Helvetica Neue', Arial, 'Noto Sans', 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', sans-serif; }
+        /* soft container */
+        .card { @apply bg-white/70 dark:bg-white/5 backdrop-blur border border-black/5 dark:border-white/10 rounded-2xl shadow-sm; }
+        .chip { @apply inline-flex items-center gap-1 px-3 py-1 rounded-full bg-black/5 dark:bg-white/10 text-sm; }
+    </style>
 </head>
+<body class="bg-gradient-to-br from-slate-50 to-slate-100 dark:from-slate-900 dark:to-slate-950 text-slate-900 dark:text-slate-100">
+<!-- Header / Hero -->
+<header class="sticky top-0 z-50 bg-white/70 dark:bg-slate-900/70 backdrop-blur border-b border-black/5 dark:border-white/10">
+    <nav class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
+        <a href="#home" class="font-extrabold tracking-tight text-xl">Aman Raj</a>
+        <ul class="hidden sm:flex items-center gap-6 text-sm">
+            <li><a href="#work" class="hover:underline">Work</a></li>
+            <li><a href="#projects" class="hover:underline">Projects</a></li>
+            <li><a href="#skills" class="hover:underline">Skills</a></li>
+            <li><a href="#apps" class="hover:underline">Apps</a></li>
+            <li><a href="#contact" class="hover:underline">Contact</a></li>
+        </ul>
+        <a id="resumeLink" href="#" target="_blank" class="text-xs sm:text-sm px-3 py-2 rounded-xl bg-slate-900 text-white dark:bg-white dark:text-slate-900">Download CV</a>
+    </nav>
+</header>
 
-<body>
-	<div class="loading"></div>
-	<audio class="song" controls loop>
-        <source src="hbd.mp3"></source>
-	   Your browser isn't invited for super fun audio time.
-    </audio>
-    <div class="balloons text-center" id="b1">
-    	<h2 style="color:#F2B300;">K</h2>
-    </div>
-    <div class="balloons text-center" id="b2">
-    	<h2 style="color:#0719D4;">H</h2>
-    </div>
-	<div class="balloons text-center" id="b3">
-    	<h2 style="color:#D14D39;">U</h2>
-    </div>
-	<div class="balloons text-center" id="b4">
-    	<h2 style="color:#8FAD00;">SH</h2>
-    </div>
-	<div class="balloons text-center" id="b5">
-    	<h2 style="color:#8377E4;">B</h2>
-    </div>
-    <div class="balloons text-center" id="b6">
-    	<h2 style="color:#99C96A;">O</h2>
-    </div>
-    <div class="balloons text-center" id="b7">
-    	<h2 style="color:#20CFB4;">O</h2>
-    </div>
+<main id="home" class="max-w-6xl mx-auto px-4">
+    <!-- Intro -->
+    <section class="grid md:grid-cols-[1.2fr_0.8fr] gap-6 md:gap-10 mt-10 items-center">
+        <div class="card p-6 md:p-8">
+            <h1 class="text-3xl md:text-5xl font-extrabold leading-tight">👋 Hi, I’m <span class="text-sky-600">Aman Raj</span></h1>
+            <p class="mt-4 text-lg text-slate-700 dark:text-slate-300" id="headline">Building mobile & web apps with React Native, React.js, Laravel & Node.js.</p>
+            <p class="mt-4 text-slate-600 dark:text-slate-400" id="summary">I design, build, and ship reliable software — from pixel-perfect UIs to scalable APIs.</p>
+            <div class="mt-6 flex flex-wrap items-center gap-3" id="quickLinks">
+                <!-- Filled by JS: location, email, socials -->
+            </div>
+        </div>
+        <aside class="card p-6 md:p-8 flex items-center gap-4">
+            <img id="avatar" alt="Aman Raj" class="w-24 h-24 rounded-2xl object-cover border border-black/10 dark:border-white/10" src="" />
+            <div>
+                <div id="name" class="font-bold text-xl">Aman Raj</div>
+                <div id="label" class="text-slate-600 dark:text-slate-400">Full‑Stack Developer</div>
+                <div id="location" class="mt-1 text-sm text-slate-500"></div>
+                <div class="mt-3 flex gap-2">
+                    <a id="githubLink" class="chip" target="_blank" href="#">GitHub</a>
+                    <a id="linkedinLink" class="chip" target="_blank" href="#">LinkedIn</a>
+                    <a id="websiteLink" class="chip" target="_blank" href="#">Website</a>
+                </div>
+            </div>
+        </aside>
+    </section>
 
-    <img src="Balloon-Border.png" width="100%" class="balloon-border">
- 
+    <!-- Work Experience -->
+    <section id="work" class="mt-12">
+        <h2 class="text-2xl font-bold mb-4">Work</h2>
+        <div id="workList" class="grid gap-4"></div>
+    </section>
 
-	<div class="container">
-		
-		<div class="row">
-			<div class="col-md-2 col-xs-2 bulb-holder">
-				<div class="bulb" id="bulb_yellow"></div>
-			</div>
-			<div class="col-md-2 col-xs-2 bulb-holder">
-				<div class="bulb" id="bulb_red"></div>
-			</div>
-			<div class="col-md-2 col-xs-2 bulb-holder">
-				<div class="bulb" id="bulb_blue"></div>
-			</div>
-			<div class="col-md-2 col-xs-2 bulb-holder">
-				<div class="bulb" id="bulb_green"></div>
-			</div>
-			<div class="col-md-2 col-xs-2 bulb-holder">
-				<div class="bulb" id="bulb_pink"></div>
-			</div>
-			<div class="col-md-2 col-xs-2 bulb-holder">
-				<div class="bulb" id="bulb_orange"></div>
-			</div>
-		</div>
-		<div class="row">
-			<div class="col-md-12 text-center">
-				<img src="banner.png" class="bannar">
-			</div>
-		</div>
-		<div class="row cake-cover">
-			<div class="col-md-12 texr-center">
-				<div class="cake">
-				  <div class="velas">
-				    <div class="fuego"></div>
-				    <div class="fuego"></div>
-				    <div class="fuego"></div>
-				    <div class="fuego"></div>
-				    <div class="fuego"></div>
-				  </div>
-				  <div class="cobertura"></div>
-				  <div class="bizcocho"></div>
-				</div>
-			</div>
-		</div>
-		<div class="row message">
-			<div class="col-md-12">
-				<p>Today is...</p>
-				<p>as beautiful as other days</p>
-				<p>but you realize</p>
-				<p>another year has gone</p>
-				<p>in a blink of the eyes</p>
-				<p><strong>however</strong></p>
-				<p>Do you know..?</p>
-				<p>today is just special</p>
-				<p>so special to you</p>
-				<p>that's why</p>
-				<p>Let's make it...</p>
-				<p>the best celebration ever</p>
-				<p>and let me share...</p>
-				<p>a piece of happiness to you</p>
-				<p>I made all this...</p>
-				<p>as a birthday present to you</p>
-				<p>thanks for being there</p>
-				<p>thanks for the friendship we made</p>
-				<p>thanks for everything</p>
-				<p>I wish you all the best</p>
-				<p>May your life be at ease</p>
-				<p>May all your wishes come true</p>
-				<p>Remember</p>
-				<p>your ambitions</p>
-				<p>you live as a free bird...</p>
-				<p>flying in the blue sky</p>
-				<p>Now things are different...</p>
-				<p>real story of your life</p>
-				<p>is just about to begin</p>
-				<p>indeed..</p>
-				<p>but...</p>
-				<p>don't worry</p>
-				<p>because...</p>
-				<p>God has your back</p>
-				<p>and</p>
-				<p>this year will be better</p>
-				<p>and I hope</p>
-				<p>you'll find...</p>
-				<p>happiness along the way</p>
-				<p>keep your spirit up</p>
-				<p>enjoy every single moment...</p>
-				<p>that you experience today</p>
-				<p>fill it with your most beautiful smile</p>
-				<p>and make it the best memory..</p>
-				<p>lastly...</p>
-				<p>I'd like to wish you one more time</p>
-				<p>a very happy birthday Khusboo</p>
-			</div>
-		</div>
-		<div class="navbar navbar-fixed-bottom">
-			<div class="row">
-				<div class="col-md-6 text-center col-md-offset-3">
-					<button class="btn btn-primary" id="turn_on">Turn On Lights</button>
-					<button class="btn btn-primary" id="play">Play Music</button>
-					<button class="btn btn-primary" id="bannar_coming">Let's Decorate</button>
-					<button class="btn btn-primary" id="balloons_flying">Fly With Balloons</button>
-					<button class="btn btn-primary" id="cake_fadein">Most Delicious Cake Ever</button>
-					<button class="btn btn-primary" id="light_candle"> Light Candle</button>
-					<button class="btn btn-primary" id="wish_message">Happy Birthday</button>
-					<button class="btn btn-primary" id="story">A mesage for you</button>
-					<!-- <button class="btn btn-primary" id="cake_cut">Lrt's Cut the Cake</button> -->
-				</div>
-			</div>
-			<!-- <div class="col-md-2">
-			</div>
-			<div class="col-md-2">
-			</div>
-			<div class="col-md-2">
-			</div>
-			<div class="col-md-2">
-			</div>
-			<div class="col-md-2">
-			</div> -->
-		</div>
+    <!-- Projects -->
+    <section id="projects" class="mt-12">
+        <h2 class="text-2xl font-bold mb-4">Projects</h2>
+        <div id="projectGrid" class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4"></div>
+    </section>
 
+    <!-- Skills -->
+    <section id="skills" class="mt-12">
+        <h2 class="text-2xl font-bold mb-4">Skills</h2>
+        <div id="skillGroups" class="grid md:grid-cols-2 gap-4"></div>
+    </section>
 
-	</div>
+    <!-- Apps Published -->
+    <section id="apps" class="mt-12">
+        <h2 class="text-2xl font-bold mb-4">Published Apps</h2>
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            <!-- Hard-coded from user message -->
+            <a class="card p-4 hover:shadow-md transition" href="https://apps.apple.com/in/app/foodship-pos/id6449244421" target="_blank">
+                <div class="font-semibold">FoodShip POS (iOS)</div>
+                <div class="text-sm text-slate-500">Point of Sale</div>
+            </a>
+            <a class="card p-4 hover:shadow-md transition" href="https://apps.apple.com/in/app/drone-mandi/id1667047616" target="_blank">
+                <div class="font-semibold">Drone Mandi (iOS)</div>
+                <div class="text-sm text-slate-500">Agri‑commerce</div>
+            </a>
+            <a class="card p-4 hover:shadow-md transition" href="https://play.google.com/store/apps/details?id=com.foodshippos" target="_blank">
+                <div class="font-semibold">FoodShip POS (Android)</div>
+                <div class="text-sm text-slate-500">Point of Sale</div>
+            </a>
+            <a class="card p-4 hover:shadow-md transition" href="https://play.google.com/store/apps/details?id=com.dronemandi" target="_blank">
+                <div class="font-semibold">Drone Mandi (Android)</div>
+                <div class="text-sm text-slate-500">Agri‑commerce</div>
+            </a>
+            <a class="card p-4 hover:shadow-md transition" href="https://apps.apple.com/in/app/my-fuel-bunk/id6504452031" target="_blank">
+                <div class="font-semibold">My Fuel Bunk (iOS)</div>
+                <div class="text-sm text-slate-500">Fuel Station Ops</div>
+            </a>
+            <a class="card p-4 hover:shadow-md transition" href="https://play.google.com/store/apps/details?id=yoppio.com&hl=en_IN" target="_blank">
+                <div class="font-semibold">Yoppio (Android)</div>
+                <div class="text-sm text-slate-500">Social / Productivity</div>
+            </a>
+        </div>
+        <p class="mt-3 text-sm text-slate-500">More on my GitHub below.</p>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="mt-12 mb-16">
+        <h2 class="text-2xl font-bold mb-4">Contact</h2>
+        <div class="card p-6">
+            <p>Email: <a class="underline" href="mailto:office.amanraj@gmail.com">office.amanraj@gmail.com</a></p>
+            <p class="mt-2">Telegram: <a class="underline" href="https://t.me/amanrajtoppoart" target="_blank">@amanrajtoppoart</a></p>
+            <p class="mt-2">Open to: React Native, React.js, Laravel, Node.js collaborations</p>
+        </div>
+    </section>
+</main>
+
+<footer class="border-t border-black/5 dark:border-white/10 py-8 text-center text-sm text-slate-500">
+    Built with the <a class="underline" href="https://gitconnected.com/portfolio-api" target="_blank">gitconnected Portfolio API</a>. © <span id="year"></span> Aman Raj.
+</footer>
+
+<script>
+    const username = 'amanrajtoppoart007';
+    const API = `https://gitconnected.com/api/v1/portfolio/${username}`;
+
+    const el = (sel) => document.querySelector(sel);
+
+    function fmtDate(iso){
+        try { return new Date(iso).toLocaleDateString(undefined, { year:'numeric', month:'short' }); }
+        catch { return ''; }
+    }
+
+    function makeWorkItem(job){
+        const start = job.start ? fmtDate(job.start) : '';
+        const end = job.end ? fmtDate(job.end) : (job.current ? 'Present' : '');
+        const bullets = (job.highlights || []).map(t=>`<li class="list-disc ml-5">${t}</li>`).join('');
+        return `
+        <article class="card p-5">
+          <div class="flex items-start justify-between gap-4">
+            <div>
+              <h3 class="font-semibold">${job.position || ''} · <span class="text-slate-600 dark:text-slate-400">${job.name || job.company || ''}</span></h3>
+              <div class="text-sm text-slate-500">${start}${start? ' — ' : ''}${end}</div>
+            </div>
+            ${job.url ? `<a class="chip" href="${job.url}" target="_blank">Website</a>`: ''}
+          </div>
+          ${job.summary ? `<p class="mt-3 text-slate-700 dark:text-slate-300">${job.summary}</p>`: ''}
+          ${bullets? `<ul class="mt-3 space-y-1">${bullets}</ul>`: ''}
+          ${Array.isArray(job.keywords)&& job.keywords.length? `<div class="mt-3 flex flex-wrap gap-2">${job.keywords.map(k=>`<span class='chip'>${k}</span>`).join('')}</div>`: ''}
+        </article>`;
+    }
+
+    function makeProjectCard(p){
+        const link = p.website || p.githubUrl || p.url || '#';
+        const tags = Array.isArray(p.keywords)? p.keywords.slice(0,6) : [];
+        return `
+        <a class="card p-4 hover:shadow-md transition block" href="${link}" target="_blank">
+          <div class="font-semibold">${p.name || p.displayName || 'Project'}</div>
+          ${p.summary ? `<p class="mt-1 text-sm text-slate-600 dark:text-slate-400">${p.summary}</p>`: ''}
+          ${tags.length? `<div class="mt-3 flex flex-wrap gap-2">${tags.map(t=>`<span class='chip'>${t}</span>`).join('')}</div>`: ''}
+        </a>`;
+    }
+
+    function skillGroup(g){
+        const items = (g.keywords || g.skills || []).map(s=>`<span class='chip'>${typeof s === 'string' ? s : (s.name || '')}</span>`).join('');
+        return `<div class="card p-5"><div class="font-semibold">${g.name || g.label || 'Skills'}</div><div class="mt-3 flex flex-wrap gap-2">${items}</div></div>`;
+    }
+
+    async function load(){
+        const year = new Date().getFullYear();
+        el('#year').textContent = year;
+        try {
+            const res = await fetch(API, { cache: 'no-store' });
+            if(!res.ok) throw new Error('Network error');
+            const data = await res.json();
+            // Header basics
+            el('#name').textContent = data.basics?.name || 'Aman Raj';
+            el('#label').textContent = data.basics?.label || 'Full‑Stack Developer';
+            el('#headline').textContent = data.basics?.headline || el('#headline').textContent;
+            el('#summary').textContent = data.basics?.summary || el('#summary').textContent;
+            if (data.basics?.image) el('#avatar').src = data.basics.image;
+            if (data.basics?.location) {
+                const loc = [data.basics.location.city, data.basics.location.region, data.basics.location.countryCode].filter(Boolean).join(', ');
+                el('#location').textContent = loc;
+            }
+            // Links
+            const profiles = data.basics?.profiles || [];
+            const find = (net) => profiles.find(p => (p.network||'').toLowerCase() === net);
+            const gh = find('github');
+            const li = find('linkedin');
+            const web = data.basics?.website || data.website;
+            const email = data.basics?.email || 'office.amanraj@gmail.com';
+            el('#githubLink').href = gh?.url || '#';
+            el('#linkedinLink').href = li?.url || '#';
+            el('#websiteLink').href = web || '#';
+            el('#resumeLink').href = `${location.origin}${location.pathname.replace(/\/[^/]*$/, '')}/${username}-resume.json`;
+            el('#quickLinks').innerHTML = `
+          <a class="chip" href="mailto:${email}">Email</a>
+          ${gh? `<a class="chip" target="_blank" href="${gh.url}">GitHub</a>`:''}
+          ${li? `<a class="chip" target="_blank" href="${li.url}">LinkedIn</a>`:''}
+          ${web? `<a class="chip" target="_blank" href="${web}">Website</a>`:''}
+        `;
+            // Work
+            const work = data.work || [];
+            el('#workList').innerHTML = work.map(makeWorkItem).join('');
+            // Projects (from projects or repositories)
+            const projects = data.projects || [];
+            const repos = (data.github?.repos || []).map(r=>({ name:r.name, summary:r.description, website:r.url, githubUrl:r.url, keywords:r.topics }))
+            const allProjects = [...projects, ...repos].slice(0, 9);
+            el('#projectGrid').innerHTML = allProjects.map(makeProjectCard).join('');
+            // Skills
+            const skills = data.skills || [];
+            el('#skillGroups').innerHTML = skills.map(skillGroup).join('');
+        } catch (err) {
+            console.warn('Failed to fetch portfolio API. Using defaults.');
+            // Keep defaults from the HTML; no crash.
+        }
+    }
+
+    load();
+</script>
 </body>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
-<script src="effect.js"></script>
 </html>
